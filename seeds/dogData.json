@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Fred",
+    "breed": "Bulldog",
+    "age": 4,
+    "size": "medium",
+    "sex": "male",
+    "needed_funding": 100,
+    "about": "I am a dog"
+  },
+  {
+    "name": "Spot",
+    "breed": "Black Lab",
+    "age": 2,
+    "size": "Large",
+    "sex": "male",
+    "needed_funding": 90,
+    "about": "I am a dog"
+  },
+  {
+    "name": "Cookie",
+    "breed": "Corgi",
+    "age": 2,
+    "size": "medium",
+    "sex": "female",
+    "needed_funding": 150,
+    "about": "I am a dog"
+  },
+  {
+    "name": "Potato",
+    "breed": "Corgi",
+    "age": 4,
+    "size": "medium",
+    "sex": "male",
+    "needed_funding": 75,
+    "about": "I am a dog"
+  }
+]
