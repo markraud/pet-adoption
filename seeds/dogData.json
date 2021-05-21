@@ -6,7 +6,8 @@
     "size": "medium",
     "sex": "male",
     "needed_funding": 100,
-    "about": "I am a dog"
+    "about": "I am a dog",
+    "imageUrl":"https://res.cloudinary.com/dr7w1oryg/image/upload/c_scale,h_225,w_225/v1621564826/Dogs/bulldog_qj5n54.jpg"
   },
   {
     "name": "Spot",
@@ -15,7 +16,8 @@
     "size": "Large",
     "sex": "male",
     "needed_funding": 90,
-    "about": "I am a dog"
+    "about": "I am a dog",
+    "imageUrl":"https://res.cloudinary.com/dr7w1oryg/image/upload/c_scale,h_225,w_225/v1621564826/Dogs/black_lab_siumyi.jpg"
   },
   {
     "name": "Cookie",
@@ -24,7 +26,8 @@
     "size": "medium",
     "sex": "female",
     "needed_funding": 150,
-    "about": "I am a dog"
+    "about": "I am a dog",
+    "imageUrl":"https://res.cloudinary.com/dr7w1oryg/image/upload/c_scale,h_225,w_225/v1621564931/Dogs/cookie_corgi_pvd5to.jpg"
   },
   {
     "name": "Potato",
@@ -33,6 +36,7 @@
     "size": "medium",
     "sex": "male",
     "needed_funding": 75,
-    "about": "I am a dog"
+    "about": "I am a dog",
+    "imageUrl":"https://res.cloudinary.com/dr7w1oryg/image/upload/v1621562038/Dogs/Potato_corgi_h8xdv9.jpg"
   }
 ]
