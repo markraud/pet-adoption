@@ -1,4 +1,5 @@
 const Sequelize = require('sequelize');
+const cloudinary = require('cloudinary');
 require('dotenv').config();
 
 let sequelize;
