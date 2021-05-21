@@ -27,6 +27,35 @@
         <textarea class='form-input' id='dog-breed' name='dog-breed'></textarea>
       </div>
       <div class='form-group'>
+        <label for='dog-age'>Age:</label>
+        <textarea class='form-input' id='dog-age' name='dog-age'></textarea>
+      </div>
+      <div class='form-group'>
+        {{!-- <label for='dog-size'>Size:</label>
+        <textarea class='form-input' id='dog-size' name='dog-size'></textarea> --}}
+        <label for="dog-size" class="form-label">Size:</label>
+        <input class="form-input" list="sizelistOptions" id="dog-size" placeholder="Type to search...">
+        <datalist id="sizelistOptions">
+          <option value="Small">
+          <option value="Medium">
+          <option value="Large">
+        </datalist>
+      </div>
+      <div class='form-group'>
+        {{!-- <label for='dog-sex'>Sex:</label>
+        <textarea class='form-input' id='dog-sex' name='dog-sex'></textarea> --}}
+        <label for="dog-sex" class="form-label">Sex:</label>
+        <input class="form-input" list="datalistOptions" id="dog-sex" placeholder="Type to search...">
+        <datalist id="datalistOptions">
+          <option value="Male">
+          <option value="Female">
+        </datalist>
+      </div>
+      <div class='form-group'>
+        <label for='dog-about'>About:</label>
+        <textarea class='form-input' id='dog-about' name='dog-about'></textarea>
+      </div>
+      <div class='form-group'>
         <button type='submit' class='btn btn-primary'>Create</button>
       </div>
     </form>
@@ -34,7 +63,7 @@
 
   {{#if dogs.length}}
     <div class='col-md-6 dog-list'>
-      <h3>Current Projects:</h3>
+      <h3>Listings:</h3>
 
       {{#each dogs as |dog|}}
         <div class='row mb-2'>

@@ -2,12 +2,12 @@ const newFormHandler = async (event) => {
   event.preventDefault();
 
   const name = document.querySelector('#dog-name').value.trim();
-  const breed = document.querySelector('#dog-desc').value.trim();
-  const age = document.querySelector('#dog-desc').value.trim();
-  const size = document.querySelector('#dog-desc').value.trim();
-  const sex = document.querySelector('#dog-desc').value.trim();
-  const needed_funding = document.querySelector('#dog-desc').value.trim();
-  const about = document.querySelector('#dog-desc').value.trim();
+  const breed = document.querySelector('#dog-breed').value.trim();
+  const age = document.querySelector('#dog-age').value.trim();
+  const size = document.querySelector('#dog-size').value.trim();
+  const sex = document.querySelector('#dog-sex').value.trim();
+  const needed_funding = document.querySelector('#dog-funding').value.trim();
+  const about = document.querySelector('#dog-about').value.trim();
 
   if (name && breed && age && size && sex && needed_funding && about) {
     const response = await fetch(`/api/dogs`, {
