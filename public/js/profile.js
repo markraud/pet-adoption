@@ -12,7 +12,15 @@ const newFormHandler = async (event) => {
   if (name && breed && age && size && sex && needed_funding && about) {
     const response = await fetch(`/api/dogs`, {
       method: 'POST',
-      body: JSON.stringify({ name, breed, age, size, sex, needed_funding, about }),
+      body: JSON.stringify({
+        name,
+        breed,
+        age,
+        size,
+        sex,
+        needed_funding,
+        about
+      }),
       headers: {
         'Content-Type': 'application/json',
       },
