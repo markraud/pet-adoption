@@ -20,3 +20,16 @@ if (process.env.JAWSDB_URL) {
 }
 
 module.exports = sequelize;
+// module.exports = cloudinary;
+// cloudinary.config({
+//   cloud_name: process.env.CLOUD_NAME,
+//   api_key: process.env.API_KEY,
+//   api_secret: process.env.API_SECRET
+//   });
+//   const storage = cloudinaryStorage({
+//   cloudinary: cloudinary,
+//   folder: "Dogs",
+//   allowedFormats: ["jpg", "png"],
+//   transformation: [{ width: 225, height: 225, crop: "limit" }]
+//   });
+//   const parser = multer({ storage: storage });
