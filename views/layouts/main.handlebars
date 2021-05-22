@@ -12,11 +12,14 @@
       integrity='sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x'
       crossorigin='anonymous'
     />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=KoHo:wght@300&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <div class='flex-column justify-space-around'>
-      <header class='display-flex justify-space-between align-center p-2'>
+      <header id='header' class='display-flex justify-space-between align-center p-2'>
         <h1>
           <a href='/'>Dogs Available for Adoption</a>
         </h1>
@@ -42,6 +45,7 @@
 
     <!-- Render script for logged in users only -->
     {{#if logged_in}}
+      <script src="https://kit.fontawesome.com/85e3f8554d.js" crossorigin="anonymous"></script>
       <script src='/js/logout.js'></script>
     {{/if}}
   </body>
