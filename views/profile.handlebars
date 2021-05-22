@@ -55,9 +55,19 @@
         <label for='dog-about'>About:</label>
         <textarea class='form-input' id='dog-about' name='dog-about'></textarea>
       </div>
-      <div class='form-group'>
+      {{!-- <input type="file" id="fileupload"> --}}
+      <form method="post" enctype="multipart/form-data">
+    <input type="file" name="files[]" multiple>
+    <input type="submit" value="Upload Files">
+  </form>
+
+  <p id="data">
+
+  </p>
+
+      {{!-- <div class='form-group'>
         <button type='submit' class='btn btn-primary'>Create</button>
-      </div>
+      </div> --}}
     </form>
   </div>
 
