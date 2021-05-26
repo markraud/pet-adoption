@@ -3,7 +3,11 @@ const cloudinary = require('cloudinary');
 require('dotenv').config();
 
 let sequelize;
-
+cloudinary.config({ 
+  cloud_name: process.env.Cloud_Name, 
+  api_key: process.env.API_Key,
+  api_secret: process.env.API_Secret
+});
 if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
