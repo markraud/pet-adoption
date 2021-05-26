@@ -1,6 +1,21 @@
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
+ 
 }
+
+nav .no-button {
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+} 
+
+nav a {
+
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+}
+
 
 .no-button {
   background: none;
@@ -28,17 +43,18 @@ h1, p, label, h2, h3 {
   color: black;
 }
 
-/* #header {
-  background: url('dog-images/image.png');
-  background-size: contain;
-  width: 100%;
-  min-height: 200px;
+ header {
+  background-color:moccasin;
   
+} 
+
+.flex-column {
+  background-color:moccasin;
 }
 
-body {
+/* body {
   background: url('../../dog-images/image.png');
   background-size: contain;
   z-index: 999;
   background-color: none !important;
-} */
+}  */
