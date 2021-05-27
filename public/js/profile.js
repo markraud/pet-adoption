@@ -1,4 +1,4 @@
-var dogUrl = '';
+let dogUrl = '';
 myWidget = cloudinary.createUploadWidget({
   cloudName: 'dr7w1oryg',
   uploadPreset: 'acbjtlov'
@@ -6,7 +6,7 @@ myWidget = cloudinary.createUploadWidget({
   if (!error && result && result.event === "success") {
     console.log('Done! Here is the image info: ');
     dogUrl = result.info.url;
-    console.log(dogUrl);
+    console.log(`This is the new dogURL: ${dogUrl} `);
     return dogUrl;
   }
 })
@@ -24,11 +24,11 @@ const newFormHandler = async (event) => {
   const sex = document.querySelector('#dog-sex').value.trim();
   const needed_funding = document.querySelector('#dog-funding').value.trim();
   const about = document.querySelector('#dog-about').value.trim();
-  const image_url = dogUrl;
+  const imageUrl = dogUrl;
 
-  // console.log(`This is the new dogURL${dogUrl} `);
+  // console.log(`This is the new dogURL inside the form handler${image_url} `);
 
-  if (name && breed && age && size && sex && needed_funding && about && image_url) {
+  if (name && breed && age && size && sex && needed_funding && about && imageUrl) {
     const response = await fetch(`/api/dogs`, {
       method: 'POST',
       body: JSON.stringify({
@@ -39,7 +39,7 @@ const newFormHandler = async (event) => {
         sex,
         needed_funding,
         about,
-        image_url
+        imageUrl
       }),
       headers: {
         'Content-Type': 'application/json',
