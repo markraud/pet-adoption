@@ -1,3 +1,19 @@
+let dogUrl = '';
+myWidget = cloudinary.createUploadWidget({
+  cloudName: 'dr7w1oryg',
+  uploadPreset: 'acbjtlov'
+}, (error, result) => {
+  if (!error && result && result.event === "success") {
+    console.log('Done! Here is the image info: ');
+    dogUrl = result.info.url;
+    console.log(`This is the new dogURL: ${dogUrl} `);
+    return dogUrl;
+  }
+})
+document.getElementById("upload_widget").addEventListener("click", function () {
+  myWidget.open();
+}, false);
+
 const newFormHandler = async (event) => {
   event.preventDefault();
 
@@ -8,8 +24,11 @@ const newFormHandler = async (event) => {
   const sex = document.querySelector('#dog-sex').value.trim();
   const needed_funding = document.querySelector('#dog-funding').value.trim();
   const about = document.querySelector('#dog-about').value.trim();
+  const imageUrl = dogUrl;
 
-  if (name && breed && age && size && sex && needed_funding && about) {
+  // console.log(`This is the new dogURL inside the form handler${image_url} `);
+
+  if (name && breed && age && size && sex && needed_funding && about && imageUrl) {
     const response = await fetch(`/api/dogs`, {
       method: 'POST',
       body: JSON.stringify({
@@ -19,7 +38,8 @@ const newFormHandler = async (event) => {
         size,
         sex,
         needed_funding,
-        about
+        about,
+        imageUrl
       }),
       headers: {
         'Content-Type': 'application/json',
@@ -32,55 +52,9 @@ const newFormHandler = async (event) => {
       alert('Failed to create dog');
     }
   }
-//   const CLOUDINARY_URL = 'https://api.cloudinary.com/v1_1/dr7w1oryg';
-// const CLOUDINARY_UPLOAD_PRESET = 'acbjtlov';
-// const image = document.querySelector('#fileupload');
-// image.addEventListener('change', (e) => {
-//   const file = e.target.files[0];
-//   const formData = new FormData();
-//   formData.append('file', file);
-//   formData.append('upload_preset', CLOUDINARY_UPLOAD_PRESET);
 
-//   fetch(CLOUDINARY_URL, {
-//     method: 'POST',
-//     body: formData,
-//   })
-//     .then(response => response.json())
-//     .then((data) => {
-//       if (data.secure_url !== '') {
-//         const uploadedFileUrl = data.secure_url;
-//         localStorage.setItem('passportUrl', uploadedFileUrl);
-//       }
-//     })
-//     .catch(err => console.error(err));
-// });
-const url = "https://api.cloudinary.com/v1_1/dr7w1oryg/upload";
-const form = document.querySelector("form");
-const CLOUDINARY_UPLOAD_PRESET = 'acbjtlov';
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  const files = document.querySelector("[type=file]").files;
-  const formData = new FormData();
-
-  for (let i = 0; i < files.length; i++) {
-    let file = files[i];
-    formData.append("file", file);
-    formData.append("upload_preset", CLOUDINARY_UPLOAD_PRESET);
-
-    fetch(url, {
-      method: "POST",
-      body: formData
-    })
-      .then((response) => {
-        return response.text();
-      })
-      .then((data) => {
-        document.getElementById("data").innerHTML += data;
-      });
-  }
-});
 };
+
 
 const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
@@ -97,6 +71,8 @@ const delButtonHandler = async (event) => {
     }
   }
 };
+
+
 
 document
   .querySelector('.new-dog-form')
