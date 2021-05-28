@@ -46,8 +46,9 @@ Contributions are excepted. Fill free to fork.
 https://github.com/markraud/pet-adoption
 
 # Link to Heroku:
+https://paws4yall.herokuapp.com/
 
 
 # Screenshot
 
- ![screenshot](./dog-images/screen-shot.png)
+ ![screenshot](./dog-images/screen-shot-2.png)
