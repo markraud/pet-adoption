@@ -1,7 +1,7 @@
 let dogUrl = '';
 myWidget = cloudinary.createUploadWidget({
-  cloudName: 'dr7w1oryg',
-  uploadPreset: 'acbjtlov'
+  cloudName: 'CLOUD_NAME',
+  uploadPreset: 'UPLOAD_PRESET'
 }, (error, result) => {
   if (!error && result && result.event === "success") {
     console.log('Done! Here is the image info: ');
